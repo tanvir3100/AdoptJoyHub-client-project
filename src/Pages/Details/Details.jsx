@@ -8,7 +8,7 @@ import Swal from 'sweetalert2'
 
 
 const Details = () => {
-    const { user} = useContext(AuthContext)
+    const { user } = useContext(AuthContext)
     const [pets] = usePet();
     const axiosSecure = useAxios();
     const { id } = useParams();
@@ -46,8 +46,8 @@ const Details = () => {
                     });
                 }
             })
-            .then(()=>{
-                window.location.reload(); 
+            .then(() => {
+                window.location.reload();
             })
 
     }
@@ -57,11 +57,13 @@ const Details = () => {
 
     return (
         <div className="card bg-base-100 shadow-xl rounded-none">
-            <figure><img src={petImage} alt="pets" /></figure>
-            <div className="card-body">
-                <h2 className="card-title">Pet Name: {petName}</h2>
-                <p>Pet Age: {petAge}</p>
-                <p>Pet Location: {petLocation}</p>
+            <figure><img className="lg:w-[40%]" src={petImage} alt="pets" /></figure>
+            <div className="card-body w-3/4">
+                <div className="w-3/4">
+                    <h2 className="card-title">Pet Name: {petName}</h2>
+                    <p>Pet Age: {petAge}</p>
+                    <p>Pet Location: {petLocation}</p>
+                </div>
                 <div className="card-actions justify-end">
                     <button className="btn bg-gradient-to-r from-lime-600 to-lime-300 text-black" onClick={() => document.getElementById('my_modal_5').showModal()}>Adopt</button>
                     <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">

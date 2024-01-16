@@ -26,12 +26,12 @@ const DonationDetails = () => {
 
 
     return (
-        <div className="card bg-base-100 shadow-xl rounded-none">
-            <figure><img className="w-[50%]" src={petImage} alt="pets" /></figure>
-            <div className="card-body">
-                <h2 className="card-title">Pet Name: {petName}</h2>
-                <div className="flex justify-end items-center">
-                    <div className="flex justify-center items-center gap-3">
+        <div>
+            <div className="hero min-h-screen bg-base-200">
+                <div className="hero-content flex-col lg:flex-row">
+                    <img src={petImage} className="max-w-sm rounded-lg shadow-2xl" />
+                    <div>
+                        <h1 className="text-4xl mb-5 font-bold">Pet Name: {petName}</h1>
                         <button className='bnt btn-outline rounded-full bg-green-500 p-2'>
                             Max Donation Amount :{maxDonationAmount}
                         </button>
